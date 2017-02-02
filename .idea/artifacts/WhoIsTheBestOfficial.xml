@@ -1,17 +1,11 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="WhoIsTheBestOfficial">
-    <output-path>$PROJECT_DIR$/out/artifacts/WhoIsTheBestOfficial</output-path>
-    <root id="root">
-      <element id="javaee-facet-resources" facet="WhoIsTheBestOfficial/web/Web" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="classes">
-          <element id="module-output" name="WhoIsTheBestOfficial" />
-        </element>
-        <element id="directory" name="lib">
-          <element id="library" level="project" name="JPA 2.0-2.0" />
-          <element id="library" level="project" name="Hibernate 5.2.3-5.2.3" />
-        </element>
+  <artifact type="war" name="WhoIsTheBestOfficial">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="WhoIsTheBestOfficial.war">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/META-INF/MANIFEST.MF" />
       </element>
+      <element id="artifact" artifact-name="WhoIsTheBestOfficial:war exploded" />
     </root>
   </artifact>
 </component>

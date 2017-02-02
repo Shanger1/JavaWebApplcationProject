@@ -30,8 +30,8 @@ public class AddPlayerServlet extends HttpServlet {
         player.setCountry(request.getParameter("country"));
         player.setTeam(request.getParameter("team"));
         player.setExperience(Integer.parseInt(experience));
-        player.setPlayerStatistics(0);
-        player.setTeamId(0);
+        player.setPlayerStatistics(1);
+        player.setTeamId(1);
         session.setAttribute(SessionKey.player, player);
         response.sendRedirect("addStatistics.html");
 

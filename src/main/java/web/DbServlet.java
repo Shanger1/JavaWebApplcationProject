@@ -36,13 +36,13 @@ public class DbServlet extends HttpServlet {
             Statistics statistics = (Statistics) session.getAttribute("statistics");
             catalog.team().add(team);
             catalog.save();
-            catalog.player().add(player);
-            catalog.save();
             catalog.statistics().add(statistics);
+            catalog.save();
+            catalog.player().add(player);
             catalog.saveAndClose();
             session.removeAttribute("team");
-            session.removeAttribute("player");
             session.removeAttribute("statistics");
+            session.removeAttribute("player");
             response.sendRedirect("addTeam.html");
         } catch (SQLException e) {
             e.printStackTrace();
